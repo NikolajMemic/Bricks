@@ -1,0 +1,42 @@
+*{
+	margin:0;
+	padding:0;
+}
+#game{
+	height: 100%;
+	width: 100%;
+	position: relative;
+	background: black;
+}
+
+#bricks{
+	position: absolute;
+	width: 100%;
+	height:60%;
+	background: yellow;
+}
+
+.bricks{
+	position: absolute;
+	width: 5%;
+	height: 5%;
+}
+
+#ball{
+	position: absolute;
+	height:1vh;
+	width: 1vw;
+	border-radius: 50%;
+	background: white;
+	bottom: 15%;
+	left: 45%;
+}
+
+#slider{
+	position: absolute;
+	height:5px;
+	width: 15vw;
+	left:45%;
+	bottom: 10%;
+	background: red;
+}
