@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+    background: #0a0a0c;
+    color: #00d4ff;
+    font-family: 'Segoe UI', sans-serif;
+    transition: background 0.5s ease;
+}
+
+canvas {
+    background: #000;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #00d4ff;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+}
+
+/* Efekt za upočasnitev časa */
+.time-slow {
+    filter: hue-rotate(180deg) brightness(0.8);
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background: transparent;
+    border: 1px solid #00d4ff;
+    color: #00d4ff;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #00d4ff;
+    color: #000;
+    box-shadow: 0 0 10px #00d4ff;
+}
+
+#levels-container button {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
