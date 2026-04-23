@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <title>The Bricks - Nikolaj Memič</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <h1>Retro Bricks</h1>
+
+    <div class="game-container">
+        <p class="stats">
+            Točke: <span id="score">0</span> |
+            Življenja: <span id="lives">3</span> |
+            Nivo: <span id="level">1</span> |
+            Čas: <span id="time">0</span>s |
+            Highscore: <span id="high">0</span>
+        </p>
+
+        <div class="controls">
+            <button onclick="startGame()">Start</button>
+            <button onclick="pauseGame()">Pause</button>
+            <button onclick="toggleLevelMenu()">Nivoji</button>
+            <button onclick="toggleHelpMenu()">Navodila</button>
+            <button onclick="toggleAuthorMenu()">Avtor</button>
+        </div>
+
+        <canvas id="game" width="600" height="350"></canvas>
+    </div>
+
+    <div id="level-menu" class="modal-menu" style="display:none;">
+        <div class="menu-content">
+            <h2 style="color: #00d4ff;">Izberi Nivo</h2>
+            <div id="levels-container"></div>
+            <br>
+            <button onclick="toggleLevelMenu()">Zapri</button>
+        </div>
+    </div>
+
+    <div id="help-menu" class="modal-menu" style="display:none;">
+        <div class="menu-content">
+            <h2 style="color: #00d4ff;">Navodila za igro</h2>
+            <div style="text-align: left; color: #ffffff; font-size: 0.9em; line-height: 1.4; padding: 10px;">
+                <p><strong>Cilj:</strong> uničiti vse opeke v nivoju</p>
+                <p><strong>Kontrole:</strong>Za premik uporabljaj tipki <b>A</b> za premik v levo in <b>D</b> za premik v desno.</p>
+                <p><strong>Življenja:</strong> Nivo 1 (3), Nivo 2 (2), Nivo 3 (1).</p>
+                <p><strong>Bonusi:</strong> Rdeče opeke (5 točk, poveča hitrost, 20% za extra življenje).</p>
+            </div>
+            <br>
+            <button onclick="toggleHelpMenu()">Razumem</button>
+        </div>
+    </div>
+
+    <div id="author-menu" class="modal-menu" style="display:none;">
+        <div class="menu-content autor-card"> 
+            <h3 style="color: #00d4ff;">Avtor:</h3>
+            <h2 style="color: #ffffff;">Nikolaj Memič</h2>
+            <p><a href="https://github.com/NikolajMemic/" target="_blank" style="color: #ff00ff;">GitHub</a></p>
+            <button onclick="toggleAuthorMenu()">Nazaj</button>
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/paddle.js"></script>
+    <script src="js/ball.js"></script>
+    <script src="js/bricks.js"></script>
+    <script src="js/collision.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
